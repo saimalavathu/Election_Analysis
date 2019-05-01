@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+<head>
+<link rel="icon" href="images/fav.png"/>
+<title>Election Analysis</title>
+<link href="css/style.css" rel="stylesheet"/>
+
+<!-- Carousel Links Start -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Carousel Links End -->
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  
+<style>
+.navbar ul li a:hover{background:#958E8D; color:#000;}
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+ 
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+</style>
+  
+</head>
+
+<body>
+<div id="header">
+	<div id="logo">
+	<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+	<a href="index.html"><h1>Election Analysis</h1></a>
+	</div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="width:100%">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background:#202020;">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html" style="color:#fff;font-size:25px; padding-left:25px;">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="party.html" style="color:#fff;font-size:25px;padding-left:25px;">Partywise Results</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="const.html" style="color:#fff;font-size:25px;padding-left:25px;">Constituencywise Results</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="trend.html" style="color:#fff;font-size:25px;padding-left:25px;">Constituency Trends</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="about.html" style="color:#fff;font-size:25px;padding-left:25px;">Helpline</a>
+      </li>
+  </div>
+</nav>
+
+<div class="slideshow-container">
+		<div class="mySlides1">
+				<img src="images/Capture3.png" style="width:98.5%; margin-left:10px; margin-right:10px;">
+			</div>
+
+  <div class="mySlides1">
+    <img src="images/Capture2.png" style="width:98.5%; margin-left:10px; margin-right:10px;">
+  </div>
+  
+ 
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>	
+<div class="clear"></div>
+<div id="Content">
+<center><h1 style="font-size:30px;">Election Results</h1></center>
+<center><img src="images/line1.jpg" alt="bottom img" /></center>
+	<div class="gallery">
+	 <a href="party.html">
+	   <img src="images/c1.jpg" alt="5Terre">
+	 </a>
+	 <div class="desc"><b style="font-size:15px;">Partywise Results</b></div>
+	</div>
+
+	<div class="gallery">
+	 <a href="const.html">
+	   <img src="images/c2.jpg" alt="Forest" >
+	 </a>
+	 <div class="desc"><b style="font-size:15px;">Constituencywise Results</b></div>
+	</div>
+
+	<div class="gallery">
+	 <a href="trend.html">
+	   <img src="images/c5.jpg" alt="Northern Lights" >
+	 </a>
+	 <div class="desc"><b style="font-size:15px;">Constituency Trends</b></div>
+	</div>
+
+	<div class="gallery">
+	 <a href="about.html">
+	   <img src="images/c4.jpg" alt="Mountains" >
+	 </a>
+	 <div class="desc"><b style="font-size:15px;">Helpline</b></div>
+	</div>
+
+</div>
+<div class="clear"></div>
+
+
+			
+<div id="content">
+				<center>
+					<h1>Our Team</h1>
+				</center>
+				<center>
+					<img src="images/line1.jpg" alt="bottom img" />
+				</center>
+				<br>
+				<div class="container_k1">
+					<center>
+						<div class="col-md-4">
+							<a href="#myModal_1" data-toggle="modal"><img
+								src="images/sai.jpg" alt="ser-img" />
+								<center>
+									<h2>Sai Kumar</h2>
+									<h3>UI Developer</h3>
+								</center></a>
+
+						</div>
+						<div class="col-md-4">
+							<a href="#myModal_2" data-toggle="modal"><img
+								src="images/rev.jpg" alt="ser-img" />
+								<center>
+									<h2>Revanth</h2>
+									<h3>Tech Developer</h3>
+								</center></a>
+						</div>
+						<div class="col-md-4">
+							<a href="#myModal_6" data-toggle="modal"><img
+								src="images/gadi.jpg" alt="ser-img" />
+								<center>
+									<h2>Gowtham</h2>
+									<h3>Tech Developer</h3>
+								</center></a>
+						</div>
+					</center>
+				</div>
+				<div class="clear"></div>
+				<br>
+				<div class="container_k1">
+					<center>
+						<div class="col-md-4">
+							<a href="#myModal_3" data-toggle="modal""><img
+								src="images/deekshit.jpg" alt="ser-img" />
+								<center>
+									<h2>Deekshitha</h2>
+									<h3>UI Support</h3>
+								</center></a>
+						</div>
+						<div class="col-md-4">
+							<a href="#myModal_4" data-toggle="modal"><img
+								src="images/krishna.jpg" alt="ser-img" />
+								<center>
+									<h2>Krishna</h2>
+									<h3>Tech Developer</h3>
+								</center></a>
+						</div>
+						<div class="col-md-4">
+							<a href="#myModal_5" data-toggle="modal"><img
+								src="images/madhuri.jpg" alt="ser-img" />
+								<center>
+									<h2>Madhuri</h2>
+									<h3>Database Developer</h3>
+								</center></a>
+
+						</div>
+					</center>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<br>
+			<center><h1>Our Mentor</h1></center>
+			<center><div class= "img" ><img src="images/bottom-bg.jpg" alt="bottom img"/></div></center>
+					<br>
+					<center><div class="col-md-4" style="margin-left:460px;">
+							<a href="#myModal_7" data-toggle="modal"><img src="images/sriramsir2.jpg" style="border-radius:100%;" alt="ser-img" />
+									<h2>Karumuri Sri Rama Murthy Sir</h2>
+									<h3>Under the Guidence of our beloved mentor Karumuri Sri Rama Murthy Sir, we have executed the project.</h3>
+							</a>
+					</div></center>		
+<div class="clear"></div>
+
+
+<div id="footer">
+	<center><p>&copy Election Analysis.in 2k18-19</p></center>
+</div>
+
+
+			<!-- Team-about -->
+			<div class="modal bnr-modal fade" id="myModal_1" tabindex="-1"
+				role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body modal-spa">
+							<img src="images/sai1.jpg" class="img-responsive" alt="" />
+							<h2>Sai Kumar</h2>
+							<h3>UI Developer</h3>
+							<p>Sai kumar is currently pursuing his 2nd year of MSIT at
+								JNTU Hyderabad. He worked for Mobilerays for the duration of 3
+								years as UI Developer. He designed most of the pages for the
+								website.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal bnr-modal fade" id="myModal_2" tabindex="-1"
+				role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body modal-spa">
+							<img src="images/rev1.jpg" class="img-responsive" alt="" />
+							<h2>Revanth</h2>
+							<h3>Tech Developer</h3>
+							<p>Revanth is currently pursuing his 2nd year of MSIT at JNTU
+								Hyderabad. He wrote the backend code required for the website
+								functionality.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+						<div class="modal bnr-modal fade" id="myModal_6" tabindex="-1"
+				role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body modal-spa">
+							<img src="images/gadi1.jpg" class="img-responsive" alt="" />
+							<h2>Gowtham</h2>
+							<h3>Tech Developer</h3>
+							<p>Gowtham is currently pursuing his 2nd year of MSIT at JNTU
+								Hyderabad. He wrote the backend code required for the website
+								functionality.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="modal bnr-modal fade" id="myModal_3" tabindex="-1"
+				role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body modal-spa">
+							<img src="images/deekshit1.jpg" class="img-responsive" alt="" />
+							<h2>Deekshitha</h2>
+							<h3>UI Support</h3>
+							<p>Deekshitha is currently pursuing her 2nd year of MSIT at
+								JNTU Hyderabad. She is a part of UI team and helped design and
+								maintain the pages for the website.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal bnr-modal fade" id="myModal_4" tabindex="-1"
+				role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body modal-spa">
+							<img src="images/krishna1.jpg" class="img-responsive" alt="" />
+							<h2>Krishna</h2>
+							<h3>Tech Support</h3>
+							<p>Krishna is currently pursuing her 2nd year of MSIT at JNTU
+								Hyderabad. He helped write the backend code for the website.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal bnr-modal fade" id="myModal_7" tabindex="-1"
+				role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body modal-spa">
+							<img src="images/sriramsir2.jpg" class="img-responsive" alt="" />
+							<h2>Karumuri Sri Rama Murthy Sir</h2>
+							
+							<p>Under the Guidence of our beloved mentor Karumuri Sri Rama Murthy Sir, we have executed the project.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal bnr-modal fade" id="myModal_5" tabindex="-1"
+				role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body modal-spa">
+							<img src="images/madhuri1.jpg" class="img-responsive" alt="" />
+							<h2>Madhuri</h2>
+							<h3>Database Developer</h3>
+							<p>Madhuri is currently pursuing her 2nd year of MSIT at JNTU
+								Hyderabad. She helped design and maintain the database as per
+								the requirement.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+</body>
+</html>
